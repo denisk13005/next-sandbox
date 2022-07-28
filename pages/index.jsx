@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import twitter from "../public/twitter.png";
+import { FcGoogle } from "react-icons/fc";
+import { BsApple } from "react-icons/bs";
 
 export default function Home() {
   return (
@@ -38,12 +40,20 @@ export default function Home() {
             Ça se passe
             <br /> maintenant{" "}
           </h1>
-          <h2>{`Rejoignez Twitter dès 'hui`}</h2>
+          <h2>{`Rejoignez Twitter dès aujourd'hui`}</h2>
           <div className={styles.btnsContainer}>
-            <button>{`S'inscrire avec Google`}</button>
-            <button>{`S'inscrire avec Apple`}</button>
-            <p>ou</p>
-            <button>{`S'inscrire avec un numéro de téléphone`}</button>
+            <button>
+              <FcGoogle className={styles.googleIcon} />
+              {`S'inscrire avec Google`}
+            </button>
+            <button>
+              <BsApple className={styles.appleIcon} />
+              {`S'inscrire avec Apple`}
+            </button>
+            <p className={styles.ou}>ou</p>
+            <button
+              className={styles.tel}
+            >{`S'inscrire avec un numéro de téléphone`}</button>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
               excepturi totam. Impedit neque illum ab assumenda enim saepe
