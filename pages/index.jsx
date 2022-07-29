@@ -6,6 +6,18 @@ import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
 
 export default function Home() {
+  const connectWithGoogle = (config) => {
+    console.log("google");
+  };
+  const connectWithApple = (config) => {
+    console.log("Apple");
+  };
+  const connectWithTel = (config) => {
+    console.log("Tel");
+  };
+  const connecting = (config) => {
+    console.log("connecting");
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -42,16 +54,22 @@ export default function Home() {
           </h1>
           <h2>{`Rejoignez Twitter dès aujourd'hui`}</h2>
           <div className={styles.btnsContainer}>
-            <button className={styles.googleBtn}>
+            <button
+              className={styles.googleBtn}
+              onClick={() => connectWithGoogle()}
+            >
               <FcGoogle className={styles.googleIcon} />
               {`S'inscrire avec Google`}
             </button>
-            <button className={styles.appleBtn}>
+            <button
+              className={styles.appleBtn}
+              onClick={() => connectWithApple()}
+            >
               <BsApple className={styles.appleIcon} />
               {`S'inscrire avec Apple`}
             </button>
             <p className={styles.ou}>ou</p>
-            <button className={styles.tel}>
+            <button className={styles.tel} onClick={() => connectWithTel()}>
               <span>{`S'inscrire avec un numéro de téléphone`}</span>
             </button>
             <p className={styles.condition}>
@@ -63,7 +81,9 @@ export default function Home() {
             </p>
           </div>
           <p className={styles.already}>Vous avez déjà un compte ?</p>
-          <button className={styles.connectedBtn}>Se connecter</button>
+          <button className={styles.connectedBtn} onClick={() => connecting()}>
+            Se connecter
+          </button>
         </aside>
       </main>
     </div>
