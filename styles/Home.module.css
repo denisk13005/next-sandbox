@@ -1,12 +1,12 @@
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 97vh;
   display: flex;
   /* justify-content: space-between; */
 }
 .imgContainer {
   border: 1px solid white;
-  height: 100vh;
+  height: 100%;
   position: relative;
   width: 59%;
 }
@@ -16,15 +16,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 50%;
   height: 35%;
 }
 .rightContainer {
-  height: 100vh;
+  height: 100%;
   padding-left: 40px;
   margin-top: 56px;
-  border: 1px solid red;
-  width: 41%;
+  width: 50%;
 }
 .rightContainer h2 {
   width: max-content;
@@ -40,22 +39,23 @@
   margin-left: 5px;
   font-size: 64px;
   letter-spacing: 5px;
+  color: #e7e9ea;
 }
 .rightContainer h2 {
   font-size: 26px;
   margin-top: 50px;
+  color: #e7e9ea;
 }
 
 .btnsContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
-  width: max-content;
-  border: 1px solid white;
+  margin-top: 30.5px;
+  width: 38%;
 }
 .btnsContainer button {
-  width: 300px;
-  height: 5vh;
+  width: 100%;
+  height: 4.4vh;
   border-radius: 40px;
   background-color: white;
   color: black;
@@ -64,14 +64,33 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  overflow: hidden;
+}
+.btnsContainer button:hover {
+  background-color: #e7e9ea;
 }
 
 .btnsContainer button:first-child {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
+}
+.btnsContainer .appleBtn {
+  height: 4.75vh;
+  margin-bottom: 0;
 }
 .btnsContainer .tel {
   background-color: #1d9bf0;
   color: white;
+  height: 4.7vh;
+  margin-top: 0;
+}
+.btnsContainer .tel:hover {
+  background-color: #2e72a0;
+}
+.btnsContainer .tel span {
+  width: 90%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .googleIcon {
@@ -88,6 +107,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #e7e9ea;
 }
 .ou::after {
   position: absolute;
@@ -112,4 +134,28 @@
   z-index: 10;
   background-color: white;
   opacity: 0.2;
+}
+
+.condition {
+  font-size: 9px;
+  font-weight: bold;
+  color: #e7e9ea;
+}
+
+.already {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.connectedBtn {
+  color: #1d9bf0;
+  width: 38%;
+  height: 4.7vh;
+  background-color: transparent;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.connectedBtn:hover {
+  background-color: #3a3b3b;
 }

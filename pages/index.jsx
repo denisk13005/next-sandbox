@@ -42,26 +42,28 @@ export default function Home() {
           </h1>
           <h2>{`Rejoignez Twitter dès aujourd'hui`}</h2>
           <div className={styles.btnsContainer}>
-            <button>
+            <button className={styles.googleBtn}>
               <FcGoogle className={styles.googleIcon} />
               {`S'inscrire avec Google`}
             </button>
-            <button>
+            <button className={styles.appleBtn}>
               <BsApple className={styles.appleIcon} />
               {`S'inscrire avec Apple`}
             </button>
             <p className={styles.ou}>ou</p>
-            <button
-              className={styles.tel}
-            >{`S'inscrire avec un numéro de téléphone`}</button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
-              excepturi totam. Impedit neque illum ab assumenda enim saepe
-              consequuntur nulla.
+            <button className={styles.tel}>
+              <span>{`S'inscrire avec un numéro de téléphone`}</span>
+            </button>
+            <p className={styles.condition}>
+              En vous inscrivant, vous acceptez les {`Conditions d'Utilisation`}{" "}
+              et la Politique de Confidentialité, incluant{" "}
+              {`l'Utilisation de
+              Cookies`}
+              .
             </p>
           </div>
-          <h2>Vous avez déjà un compte ?</h2>
-          <button>Se connecter</button>
+          <p className={styles.already}>Vous avez déjà un compte ?</p>
+          <button className={styles.connectedBtn}>Se connecter</button>
         </aside>
       </main>
     </div>
