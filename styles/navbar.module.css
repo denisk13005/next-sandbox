@@ -1,9 +1,75 @@
 .navbarContainer {
-  width: 25%;
+  width: 33%;
   height: 100%;
   border: 1px solid white;
+  padding-left: 19%;
+  position: relative;
 }
 .navbar li {
   text-decoration: none;
   list-style-type: none;
+}
+.icons {
+  margin-bottom: 28.5px;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+}
+.active {
+  font-weight: bold;
+}
+
+.icons span {
+  font-size: 20px;
+  margin-left: 18px;
+}
+
+.icone {
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.home {
+  font-size: 28px;
+}
+.tweetBtn {
+  background-color: #1d9bf0;
+  color: white;
+  height: 4.7vh;
+  margin-top: 0;
+  width: 80%;
+  border-radius: 40px;
+  height: 5vh;
+  font-weight: bold;
+  border: none;
+}
+.userInfo {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 48%;
+  padding-right: 10px;
+}
+.imgContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 1px solid white;
+}
+.userName {
+  width: max-content;
+}
+.userName h4 {
+  margin: 0;
+  margin-right: 100px;
+  width: max-content;
+}
+.userName p {
+  margin: 0;
+  font-weight: 100;
 }

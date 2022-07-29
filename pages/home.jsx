@@ -6,8 +6,8 @@ const Home = () => {
   return (
     <main className={styles.homeMainContainer}>
       <Navbar />
-      <div>Container</div>
-      <div>Right</div>
+      <div style={{ width: "33%", border: "1px solid white" }}>Container</div>
+      <div style={{ width: "33%", border: "1px solid white" }}>Right</div>
     </main>
   );
 };
