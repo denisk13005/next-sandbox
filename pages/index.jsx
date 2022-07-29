@@ -1,13 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/login.module.css";
 import twitter from "../public/twitter.png";
 import { FcGoogle } from "react-icons/fc";
 import { BsApple } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   const connectWithGoogle = (config) => {
     console.log("google");
+    router.push("/home");
   };
   const connectWithApple = (config) => {
     console.log("Apple");

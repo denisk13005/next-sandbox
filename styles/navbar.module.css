@@ -1,0 +1,9 @@
+.navbarContainer {
+  width: 25%;
+  height: 100%;
+  border: 1px solid white;
+}
+.navbar li {
+  text-decoration: none;
+  list-style-type: none;
+}
