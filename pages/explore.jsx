@@ -1,7 +1,7 @@
 import React from "react";
 
-const explore = () => {
-  return <div>explore</div>;
+const Explore = () => {
+  return <div style={{ border: "1px solid white", flexGrow: 1 }}>explore</div>;
 };
 
-export default explore;
+export default Explore;

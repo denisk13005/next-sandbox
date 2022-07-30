@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/navbar.module.css";
 import { FaTwitter } from "react-icons/fa";
 import { GiBirdHouse } from "react-icons/gi";
@@ -14,17 +14,23 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import photo from "../public/photo.jpg";
+import UserOptionModal from "./UserOptionModal";
 
 const Navbar = () => {
   const router = useRouter();
   const path = router.pathname;
   console.log(path);
+  const [open, setOpen] = useState(false);
+  const toggleUserModale = () => {
+    open ? setOpen(false) : setOpen(true);
+  };
 
   const tweet = () => {
     console.log("tweet");
   };
   return (
     <aside className={styles.navbarContainer}>
+      <UserOptionModal open={open} setOpen={setOpen} />
       <nav className={styles.navbar}>
         <li className={styles.icone}>
           <FaTwitter />
@@ -89,7 +95,10 @@ const Navbar = () => {
           <h4>user name</h4>
           <p>@user surname</p>
         </div>
-        <RiMoreFill style={{ fontSize: "30px", cursor: "pointer" }} />
+        <RiMoreFill
+          style={{ fontSize: "30px", cursor: "pointer" }}
+          onClick={() => toggleUserModale()}
+        />
       </div>
     </aside>
   );
