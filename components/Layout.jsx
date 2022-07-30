@@ -6,7 +6,7 @@ import TweetModal from "./TweetModal";
 import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const toggleModal = () => {
     modalOpen ? setModalOpen(false) : setModalOpen(true);
