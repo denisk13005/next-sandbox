@@ -30,7 +30,6 @@ const Navbar = () => {
   };
   return (
     <aside className={styles.navbarContainer}>
-      <UserOptionModal open={open} setOpen={setOpen} />
       <nav className={styles.navbar}>
         <li className={styles.icone}>
           <FaTwitter />
@@ -87,6 +86,8 @@ const Navbar = () => {
       <button className={styles.tweetBtn} onClick={() => tweet()}>
         Tweet
       </button>
+      <UserOptionModal open={open} setOpen={setOpen} />
+
       <div className={styles.userInfo}>
         <div className={styles.imgContainer}>
           <Image src={photo} width="100%" height="100%" alt="user picture" />
