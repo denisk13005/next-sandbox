@@ -2,21 +2,39 @@ import React from "react";
 import Image from "next/image";
 import photo from "../public/photo.jpg";
 import styles from "../styles/tweetModale.module.css";
-import { GrFormClose } from "react-icons/gr";
-const TweetModal = () => {
+import { RiCloseFill } from "react-icons/ri";
+import { BiWorld } from "react-icons/bi";
+const TweetModal = ({ modalOpen, setModalOpen }) => {
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  const submitTweet = (e) => {
+    e.preventDefault();
+    console.log("submit");
+  };
   return (
-    <section className={styles.container}>
+    <section className={`${modalOpen ? styles.container : styles.hidden}`}>
       <div className={styles.modaleContainer}>
-        <GrFormClose />
+        <RiCloseFill className={styles.close} onClick={closeModal} />
         <div className={styles.pictureAndForm}>
           <div className={styles.pictureContainer}>
             <Image src={photo} alt="user picture" width="100%" height="100%" />
           </div>
-          <form action="">
-            <input type="text" placeholder="entrez votre tweet" />
+          <form onSubmit={submitTweet}>
+            <input type="text" placeholder="What's happening?" />
+            <button type="submit" className={styles.tweetBtn}>
+              Tweet
+            </button>
           </form>
         </div>
-        <form action=""></form>
+        <div className={styles.optionInput}>
+          <div className={styles.reply}>
+            <BiWorld
+              style={{ color: "#1d9bf0", fontSize: "19px", marginTop: "5px" }}
+            />
+            <p>Everyone can reply</p>
+          </div>
+        </div>
       </div>
     </section>
   );

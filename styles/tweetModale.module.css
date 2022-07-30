@@ -1,30 +1,86 @@
+.hidden {
+  display: none;
+}
 .container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(141, 139, 139, 0.4);
   border: 1px solid white;
   z-index: 15;
 }
-
+.close {
+  margin: 10px 10px 0px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
 .modaleContainer {
   width: 600px;
   height: 300px;
-  background-color: red;
   margin: auto;
   margin-top: 50px;
   border-radius: 20px;
+  background-color: black;
+  position: relative;
 }
 .pictureAndForm {
   width: 100%;
+  height: 50%;
   display: flex;
+  margin-left: 10px;
+  margin-top: 15px;
 }
 
 .pictureContainer {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   overflow: hidden;
   border-radius: 100%;
+}
+.pictureAndForm form {
+  width: 80%;
+  height: 100%;
+}
+.pictureAndForm input {
+  border: none;
+  background-color: black;
+  width: 100%;
+  font-size: 20px;
+  white-space: wrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+.pictureAndForm input::placeholder {
+  color: #c4c6c7;
+  font-size: 24px;
+}
+.pictureAndForm input:focus {
+  outline: none;
+}
+.tweetBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #1d9bf0;
+  border: none;
+  font-weight: bold;
+}
+.reply {
+  color: #1d9bf0;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid rgba(126, 126, 126, 0.8);
+}
+.reply p {
+  margin: 0;
+  margin-left: 5px;
 }

@@ -16,7 +16,7 @@ import Image from "next/image";
 import photo from "../public/photo.jpg";
 import UserOptionModal from "./UserOptionModal";
 
-const Navbar = () => {
+const Navbar = ({ navOpen, setModalOpen }) => {
   const router = useRouter();
   const path = router.pathname;
   console.log(path);
@@ -25,11 +25,12 @@ const Navbar = () => {
     open ? setOpen(false) : setOpen(true);
   };
 
-  const tweet = () => {
-    console.log("tweet");
-  };
   return (
-    <aside className={styles.navbarContainer}>
+    <aside
+      className={`${
+        router.pathname === "/" ? styles.hidden : styles.navbarContainer
+      }`}
+    >
       <nav className={styles.navbar}>
         <li className={styles.icone}>
           <FaTwitter />
@@ -83,7 +84,7 @@ const Navbar = () => {
           </li>
         </Link>
       </nav>
-      <button className={styles.tweetBtn} onClick={() => tweet()}>
+      <button className={styles.tweetBtn} onClick={() => setModalOpen(true)}>
         Tweet
       </button>
       <UserOptionModal open={open} setOpen={setOpen} />

@@ -3,9 +3,15 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import TweetModal from "./TweetModal";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
-  const [tweet, setTweet] = useState(false);
+  const [modalOpen, setModalOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState(false);
+  const toggleModal = () => {
+    modalOpen ? setModalOpen(false) : setModalOpen(true);
+  };
+
   return (
     <div
       style={{
@@ -15,12 +21,10 @@ const Layout = ({ children }) => {
         justifyContent: "center",
       }}
     >
-      {/* <Header/> */}
-      <TweetModal />
-      <Navbar />
+      <TweetModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <Navbar navOpen={navOpen} setModalOpen={setModalOpen} />
       {children}
       <div style={{ width: "33%" }}>right section</div>
-      {/* <Footer/> */}
     </div>
   );
 };
