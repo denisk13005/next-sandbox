@@ -30,11 +30,9 @@ const Navbar = () => {
           <FaTwitter />
         </li>
         <Link href="/home" aria-label="Home" passHref>
-          <li className={styles.icons}>
+          <li className={path !== "/home" ? styles.icons : styles.active}>
             <GiBirdHouse />
-            <span className={path !== "/home" ? styles.span : styles.active}>
-              Home
-            </span>
+            <span className={styles.span}>Home</span>
           </li>
         </Link>
         <Link href="/explore" aria-label="Explore" passHref>

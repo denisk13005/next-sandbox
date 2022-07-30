@@ -17,6 +17,14 @@
 }
 .active {
   font-weight: bold;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 28.5px;
+}
+.active span {
+  font-size: 20px;
+  margin-left: 18px;
 }
 
 .icons span {
