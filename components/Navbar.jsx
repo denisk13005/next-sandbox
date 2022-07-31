@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/navbar.module.css";
 import { FaTwitter } from "react-icons/fa";
 import { GiBirdHouse } from "react-icons/gi";
@@ -16,15 +16,23 @@ import Image from "next/image";
 import photo from "../public/photo.jpg";
 import UserOptionModal from "./UserOptionModal";
 
-const Navbar = ({ navOpen, setModalOpen }) => {
+const Navbar = ({ navOpen }) => {
   const router = useRouter();
   const path = router.pathname;
-  console.log(path);
   const [open, setOpen] = useState(false);
   const toggleUserModale = () => {
     open ? setOpen(false) : setOpen(true);
   };
 
+  const close = (e) => {
+    e.key === "Escape" && setOpen(false);
+  };
+  useEffect(() => {
+    window.addEventListener("keyup", close);
+    return () => {
+      window.removeEventListener("keyup", close);
+    };
+  }, [close]);
   return (
     <aside
       className={`${

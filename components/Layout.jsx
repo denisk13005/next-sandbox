@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Navbar from "./Navbar";
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       }}
     >
       <TweetModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <Navbar navOpen={navOpen} setModalOpen={setModalOpen} />
+      <Navbar navOpen={navOpen} />
       {children}
       <div style={{ width: "33%" }}>right section</div>
     </div>
