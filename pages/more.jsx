@@ -1,7 +1,7 @@
 import React from "react";
 
 const More = () => {
-  return <div>More</div>;
+  return <div style={{ height: "100vh", flexGrow: "1" }}>More</div>;
 };
 
 export default More;
