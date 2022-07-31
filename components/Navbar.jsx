@@ -16,7 +16,7 @@ import Image from "next/image";
 import photo from "../public/photo.jpg";
 import UserOptionModal from "./UserOptionModal";
 
-const Navbar = ({ navOpen }) => {
+const Navbar = ({ setModalOpen }) => {
   const router = useRouter();
   const path = router.pathname;
   const [open, setOpen] = useState(false);

@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       }}
     >
       <TweetModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <Navbar navOpen={navOpen} />
+      <Navbar navOpen={navOpen} setModalOpen={setModalOpen} />
       {children}
       <div style={{ width: "33%" }}>right section</div>
     </div>
