@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import photo from "../public/photo.jpg";
 import styles from "../styles/tweetModale.module.css";
@@ -12,8 +12,22 @@ const TweetModal = ({ modalOpen, setModalOpen }) => {
     e.preventDefault();
     console.log("submit");
   };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const close = (e) => {
+    e.key === "Escape" && setModalOpen(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("keyup", close);
+    return () => {
+      window.removeEventListener("keyup", close);
+    };
+  }, [close]);
   return (
-    <section className={`${modalOpen ? styles.container : styles.hidden}`}>
+    <section
+      className={`${modalOpen ? styles.container : styles.hidden}`}
+      onKeyUp={() => console.log("tst")}
+    >
       <div className={styles.modaleContainer}>
         <RiCloseFill className={styles.close} onClick={closeModal} />
         <div className={styles.pictureAndForm}>
